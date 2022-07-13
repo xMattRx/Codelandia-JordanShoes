@@ -76,7 +76,7 @@ input:focus {
   height: 60px;
 }
 
-.header_down .header_paragraph_down{
+.header_down .header_title_down{
   color: var(--title);
   font-family: 'Montserrat';
   font-size: 24px;
@@ -116,8 +116,6 @@ input:focus {
   line-height: 39px;
   margin-bottom: 19px;
   letter-spacing: 0em;
-  text-align: left;
-  
 }
 .banner_intern_text p{
   font-family: 'Montserrat';
@@ -125,7 +123,6 @@ input:focus {
   font-weight: 600;
   line-height: 35px;
   letter-spacing: 0em;
-  text-align: left;
 }
 .container{
   display: flex;
@@ -161,6 +158,9 @@ input:focus {
 }
 .container_image{
   background-color: var(--bgCard);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 39px;
   padding: 76px 25px;
 }
@@ -190,5 +190,63 @@ footer p{
   line-height: 35px;
   letter-spacing: 0em;
   text-align: center;
+}
 
+@media screen and (max-width: 1025px) {
+  .products_lists{
+    display: grid;
+    margin-top: 59px;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .container_image:nth-child(3), .container_image:nth-child(5),.container_image:nth-child(7){
+    margin-left: 0px !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .banner_intern_text h2{
+    font-size: 28px;
+  
+  }
+  .banner_intern_text p{
+    font-size: 16px;
+  }
+  .container_products{
+    padding: 0px 20px;
+  }
+  .container_products h2{
+    font-size: 28px;
+  }
+  .container_products p{
+    font-size: 16px;
+  }
+  .container_image{
+    margin-bottom: 30px;
+    padding: 76px 62px;
+  }
+
+  .products_lists{
+    display: grid;
+    margin-top: 59px;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr;
+  }
+  .container_image{
+    margin-left: 0px !important;
+  }
+  .products_lists{
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .banner_intern_text{
+    padding-left: 20px;
+    padding-right: 37px;
+  }
+  .banner_intern_text h2{
+    margin-bottom: 12px;
+  }
 }
